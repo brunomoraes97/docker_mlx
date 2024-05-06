@@ -67,11 +67,11 @@ def start_quick_profile(token, browser_type="mimic"):
             profile_started = True
             message = response.json()['status']['message']
             return quick_profile_id, quick_profile_port, profile_started, message
-    except:
+    except Exception as e:
         quick_profile_id = False
         quick_profile_port = False
         profile_started = False
-        message = False
+        message = e
         return quick_profile_id, quick_profile_port, profile_started, message
 
 def stop_profile(profile_id):
