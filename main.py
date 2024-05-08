@@ -1,9 +1,7 @@
 import mlx_functions as mlx
-from selenium.webdriver.support.ui import WebDriverWait, Select
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-import time
 from env import *
+import time
+from selenium.webdriver.common.by import By
 
 def automation(driver): # Automation!
 
