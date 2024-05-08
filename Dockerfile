@@ -4,6 +4,7 @@ FROM ubuntu:22.04 AS base
 RUN apt-get update && \
     apt-get install -y \
     xvfb \
+    dbus-x11 \
     ca-certificates \
     fonts-liberation \
     libasound2 \
@@ -35,7 +36,7 @@ RUN apt-get update && \
     libxrandr2 \
     wget \
     xdg-utils \
-    openjdk-18-jre-headless \
+    openjdk-17-jre-headless \
     jq \
     curl \
     unzip \
