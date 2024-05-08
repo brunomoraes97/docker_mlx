@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Start Xvfb
-Xvfb :99 -screen 0 1024x768x24 &
+# Debugging purposes
+# whoami && arch && uname && cat /etc/*-release && df -h && free -h &&
 
-# Start Multilogin X launcher
-mlx &
+# Start Xvfb
+xvfb-run /opt/mlx/agent.bin &
 
 # Wait for a while so the launcher is properly installed
 sleep 20
