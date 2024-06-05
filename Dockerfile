@@ -64,7 +64,7 @@ COPY entrypoint.sh /entrypoint.sh
 # Set permissions for the entrypoint script
 RUN chmod +x /entrypoint.sh
 
-# Give necessary permissions to root -> This is for Xvfb
+# Give necessary permissions -> This is for Xvfb
 RUN mkdir /tmp/.X11-unix
 RUN chown root:root /tmp/.X11-unix && \
     chmod 1777 /tmp/.X11-unix
